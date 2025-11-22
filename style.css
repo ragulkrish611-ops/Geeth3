@@ -1,0 +1,544 @@
+<style>
+    /* --- Basic page setup --- */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      
+    }
+
+    /* --- Header section --- */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 13px 0;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Main content --- */
+    main {
+      flex: 1;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* --- Footer section --- */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+
+
+
+
+
+    /* BOX  */
+
+.product-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: #f9f9f9;
+}
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-box {
+  display: flex; /* 🟢 Arrange text and image side by side */
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1 1 calc(20% - 15px);
+  min-width: 200px;
+  padding: 25px;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product-info {
+  flex: 1; /* Text takes remaining space */
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 150px; /* fixed width for each box */
+  padding: 10px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.product-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-img {
+  width: 100px;    /* Fixed width for all images */
+  height: 100px;   /* Fixed height for all images */
+  object-fit: contain; /* Keeps image proportion without stretching */
+  margin-bottom: 10px;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin: 5px 0;
+}
+
+
+
+
+
+  /* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Container for the profile and info */
+.info-box {
+  max-width: 500px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  margin: auto;
+  overflow: hidden; /* contain floats */
+}
+
+/* Profile photo in rectangular box */
+.info-box img {
+  width: 100px;      /* width of the rectangle */
+  height: 120px;     /* height of the rectangle */
+  object-fit: cover; /* ensures image fills box */
+  float: right;      /* position on the right */
+  border-radius: 5px; /* optional small rounding */
+  border: 2px solid #333; /* optional border */
+  margin-left: 15px;
+}
+
+/* Headings */
+.info-box h2 {
+  margin-top: 0;
+}
+
+/* Paragraphs */
+.info-box p {
+  margin: 5px 0;
+}
+
+/* Container for all documents */
+.documents {
+  margin-top: 15px;
+  clear: both; /* make sure floats don’t overlap */
+}
+
+/* Two-column layout for certain links */
+.doc-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+/* Individual document link styling */
+.documents a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0066cc;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  width: 48%; /* two-column layout */
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover effect for document links */
+.documents a:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* Optional PDF icon in link */
+.documents a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Clear floats */
+.clear {
+  clear: both;
+}
+
+/* footer */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.footer-map {
+  flex: 1 1 25%;
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  flex: 1 1 45%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-section {
+  width: 45%;
+}
+
+.info-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.info-section p,
+.info-section a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.info-section a:hover {
+  color: #fff;
+}
+
+/* ✅ Social icons styling */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #f15a24;
+  border-color: #f15a24;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f4f4;
+  color: #080101;
+}
+
+.footer {
+  background: #0d0d0d;
+  padding: 30px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 5px solid #f10606;
+  padding-bottom: 20px;
+}
+
+.footer-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px;
+  color: #ccc;
+}
+
+.footer-box i {
+  font-size: 30px;
+  color: #2ecc40;
+}
+
+.footer-text {
+  color: #2ecc40;
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #2ecc40;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #2ecc40;
+}
+
+/* WhatsApp floating icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  background-color: #ffffff;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 28px;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(253, 249, 249, 0.3);
+}
+
+.whatsapp-float:hover {
+  background-color: #20b955;
+}
+
+/* Scroll-to-top button */
+.scroll-top {
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  background: #fdfffe;
+  color: white;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+.scroll-top:hover {
+  background: #27ae60;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-box {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+serves page
+
+    .service-card img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Login Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    width: 350px;
+    padding: 20px;
+    background: #fff;
+    margin: 80px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    float: left;
+    font-size: 14px;
+    margin: 8px 0 3px 0;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #0077cc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #005fa3;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 13px;
+}
